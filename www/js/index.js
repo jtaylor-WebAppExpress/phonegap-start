@@ -45,6 +45,7 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+		delete cordova;
 		window.location.assign("http://192.168.66.101:81/test/dg2_pg270.a5w");
     }
 };
