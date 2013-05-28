@@ -45,6 +45,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-		// window.location.href = 'http://192.168.66.101:81/test/dg2_pg270.a5w';
+		window.location.href = 'http://192.168.66.101:81/test/dg2_pg270.a5w';
     }
 };
