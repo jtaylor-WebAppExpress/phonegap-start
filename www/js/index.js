@@ -46,5 +46,11 @@ var app = {
 
         console.log('Received Event: ' + id);
 		// window.location.href = 'http://192.168.66.101:81/test/dg2_pg270.a5w';
+		var ele = document.getElementById('deviceProperties');
+		ele.innerHTML = 'Device Name: '	+ device.name +',br />' +	
+						'Device PhoneGap: ' + device.phonegap +',br />' +
+						'Device Platform: '	+ device.platform +',br />' +
+						'Device Version: '	+ device.version +',br />';
+					
     }
 };
