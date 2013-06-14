@@ -24,6 +24,27 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World </title>
+		  <script type="text/javascript" src="phonegap.js"></script>
+			<script type="text/javascript" src="barcodescanner.js"></script>
+			<script type="text/javascript" src="js/index.js"></script>
+			<script type="text/javascript">
+
+			var scanAndGo = function() {
+				try {
+					window.plugins.barcodeScanner.scan(function(result) {
+						navigator.notification.alert('Cool');
+						// window.location.href = result.text;
+						}, function(error) {
+							navigator.notification.alert('Scan failed: '+ error);
+					});
+				} catch(e) {
+					navigator.notification.alert('Error: '+e.message);
+				}
+			};
+
+			app.initialize();
+
+	        </script>
     </head>
     <body>
         <div class="app">
@@ -39,26 +60,6 @@
 				Loading device properties...
 			</p>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-		<script type="text/javascript" src="barcodescanner.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            
-			var scanAndGo = function() {
-				try {
-					window.plugins.barcodeScanner.scan(function(result) {
-						navigator.notification.alert('Cool');
-						// window.location.href = result.text;
-					}, function(error) {
-						navigator.notification.alert('Scan failed: '+ error);
-					});
-				} catch(e) {
-					navigator.notification.alert('Error: '+e.message);
-				}
-			};
-			
-			app.initialize();
-			
-        </script>
+      
     </body>
 </html>
