@@ -32,7 +32,7 @@
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready
 					<h2><button onclick = "window.location.href = 'http://192.168.10.5:81/test/a1.a5w?__cordovaVersion='+device.cordova+'&__cordovaPlatform='+device.platform">Load Remote Content</button></h2>
-					<h2><button onclick = "scanAndGo">Scan QR Code and Go</button></h2>
+					<h2><button onclick = "scanAndGo()">Scan QR Code and Go</button></h2>
 				</p>
             </div>
 			<p id="deviceProperties">
@@ -43,11 +43,12 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
-			var scanAndGo = function(){
+			function scanAndGo() {
+				navigator.notification.alert('Scan');
 				window.plugins.barcodeScanner.scan(function(result) {
 					window.location.href = result.text;
-				}, function(error){
-					navigator.notification.alert('Scan failed: '+error);
+				}, function(error) {
+					navigator.notification.alert('Scan failed: '+ error);
 				});
 			}
 			
