@@ -43,15 +43,16 @@
 		<script type="text/javascript" src="barcodescanner.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            app.initialize();
+            
 			function scanAndGo() {
-				navigator.notification.alert('Scan');
 				window.plugins.barcodeScanner.scan(function(result) {
-					window.location.href = result.text;
+					navigator.notification.alert('Cool');
+					// window.location.href = result.text;
 				}, function(error) {
 					navigator.notification.alert('Scan failed: '+ error);
 				});
 			}
+			app.initialize();
 			
         </script>
     </body>
