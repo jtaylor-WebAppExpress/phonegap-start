@@ -28,14 +28,14 @@
 			<script type="text/javascript" src="barcodescanner.js"></script>
 			<script type="text/javascript" src="js/index.js"></script>
 			<script type="text/javascript">
-
 			var scanAndGo = function() {
 				try {
-					window.plugins.barcodeScanner.scan(function(result) {
-						navigator.notification.alert('Cool');
-						// window.location.href = result.text;
-						}, function(error) {
-							navigator.notification.alert('Scan failed: '+ error);
+					var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+					scanner.scan(function (result) {
+						window.location.href = result.text;
+					}, 
+						function (error) {
+							navigator.notification.alert("Scanning failed: " + error);
 					});
 				} catch(e) {
 					navigator.notification.alert('Error: '+e.message);
