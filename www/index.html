@@ -32,9 +32,9 @@
 				try {
 					var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 					scanner.scan(function (result) {
-						var thisURL = result.text+'&__cordovaVersion='+device.cordova+'&__cordovaPlatform='+device.platform;
-						navigator.notification.alert=('Result: '+thisURL);
-						// window.location.href = result.text+'&__cordovaVersion='+device.cordova+'&__cordovaPlatform='+device.platform;
+						var thisURL = result.text + '&__cordovaVersion=' + device.cordova + '&__cordovaPlatform=' + device.platform;
+						alert('Result: ' + thisURL);
+						window.location.href = thisURL;
 					}, 
 						function (error) {
 							navigator.notification.alert("Scanning failed: " + error);
