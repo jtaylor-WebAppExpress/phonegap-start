@@ -32,7 +32,7 @@
 				try {
 					var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 					scanner.scan(function (result) {
-						window.location.href = result.text;
+						window.location.href = result.text+'&__cordovaVersion='+device.cordova+'&__cordovaPlatform='+device.platform';
 					}, 
 						function (error) {
 							navigator.notification.alert("Scanning failed: " + error);
