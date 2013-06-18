@@ -1,10 +1,10 @@
-# Hello World PhoneGap Application
+# AlphaScan Application
 
-> A Hello World application built with PhoneGap
+> An example application that reads a QRCode from an Alpha Anywhere component or html page builder and loads the remote PhoneGap page
 
 ## PhoneGap Build
 
-Create a new app with the following repository:
+This project is a fork of the following repository:
 
     https://github.com/phonegap/phonegap-start.git
 
@@ -26,4 +26,4 @@ to the [Apache Cordova source code][1].
 For issues with __the PhoneGap Build integration__, please submit
 an issue or pull request to this project.
 
-[1]: https://github.com/apache/cordova-app-hello-world
+[1]: https://github.com/remoorejr/phonegap-start
