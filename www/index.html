@@ -30,7 +30,7 @@
 			<script type="text/javascript">
 			var scanAndGo = function() {
 				try {
-					var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+					var scanner = cordova.require("cordova/plugins/BarcodeScanner");
 					scanner.scan(function (result) {
 						var thisURL = result.text + '&__cordovaVersion=' + device.cordova + '&__cordovaPlatform=' + device.platform;
 						window.location.href = thisURL;
@@ -39,7 +39,7 @@
 							navigator.notification.alert("Scanning failed: " + error);
 					});
 				} catch(e) {
-					navigator.notification.alert('Error: '+e.message);
+					navigator.notification.alert('Scanner error: '+e);
 				}
 			};
 
