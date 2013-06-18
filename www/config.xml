@@ -6,7 +6,7 @@
         id        = "com.alphasoftware.photoApp"
         version   = "1.0.0">
 
-    <name>Alpha Anywhere PhoneGap Photos</name>
+    <name>AlphaPhotoGap</name>
 
     <description>
         Test Alpha Anywhere / PhoneGap App
