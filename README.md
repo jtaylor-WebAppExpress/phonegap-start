@@ -2,6 +2,9 @@
 
 > An example application that reads a QRCode from an Alpha Anywhere component or html page builder and loads the remote PhoneGap page
 
+You MUST load the included Cordova folder into the executable directory of the Alpha Anywhere Application Server.
+This overrides the Cordova/PhoneGap JavaScript files that are included with the current build of Alpha Anywhere and allows Alpha Anywhere to load the required updated 2.8.0 versions of Cordova/PhoneGap.
+
 ## PhoneGap Build
 
 This project is a fork of the following repository:
